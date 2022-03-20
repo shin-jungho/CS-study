@@ -1,6 +1,5 @@
 # ES6 문법
 ## <b>const & let</b>
----
 `const`는 변수 선언을 위한 es6의 새로운 키워드이다. `const`는 `var`보다 강력하고 변수를 다시 할당할 수 없다. 따라서 객체와 함께 사용할 때를 제외하고는 ***변경 불가능한 변수***이다
 
 ```js
@@ -26,7 +25,6 @@ console.log(name);
 *자세한건 따로 정리!*
 
 ## <b>Arrow function</b>
----
 화살표 함수는 코드를 더 가독성있고, 체계적이게 만든다.
 ```js
 // es5
@@ -68,7 +66,6 @@ console.log(arr2); // 출력 => (4) ["진수", "영철", "영희", 5]
 위의 코드와 같이 화살표 함수에서의 `map`함수가 더 가독성이 있다.
 
 ## <b>Template Literals</b>
----
 문자열을 연결하기 위해 더하기(+) 연산자를 사용할 필요가 없고 ***백틱(`)안에 ${}를 사용해*** 문자열 내에서 변수를 사용할 수 있다. <br>
 ex) 
 ```js
@@ -91,7 +88,6 @@ console.log(myFunc1('영희', 22));
 // A: 안녕 영희 너의 나이는 22살 이다!
 ```
 ## <b>Array and Object destructing(구조 분해 할당)</b>
----
 비구조화를 통해 배열, 객체의 값을 새로운 변수에 더 쉽게 할당할 수 있다.
 ```js
 // es5 문법
@@ -155,7 +151,6 @@ console.log(value3);
 // A: 광희/ 지수/ 영철
 ```
 ## <b>Import and Export</b>
----
 JS MVC 패턴을 사용할 때 주로 쓰이는 것으로 `export`를 하면 다른 js구성 요소에 사용할 모듈을 내보낼 수 있고, 그 모듈을 사용하기 위해 가져오는 `import`를 사용한다. <br>
 
 ex)
@@ -175,7 +170,6 @@ console.log(detail('영희', 20));
 둘 이상의 모듈을 가져오려는 경우에 `import` 중괄호 안에 넣으면 가져올 수 있다.
 
 ## <b>Promise</b>
----
 `promise`를 사용하면 비동기 메서드에서 마치 동기 메서드처럼 값을 반환할 수 있다. 다만, 최종 ***결과를 반환하는 것이 아니고 미래의 어떤 시점에 결과를 제공***하겠다는 프로미스를 반환한다.
 
 `promise`는 다음 중 하나의 상태를 갖는다.
@@ -188,7 +182,6 @@ console.log(detail('영희', 20));
 ![this is an image](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/promises.png)
 
 ## <b>Rest parameter / Spread operator</b>
---- 
 <br>
 1. 배열에서의 spread operator <br>
 ex)
@@ -229,9 +222,8 @@ console.log( add(1, 2, 3) ); // 6
 rest parameter를 이용하면 인자의 개수에 상관없이 모든 인자를 더하는 함수를 쉽게 구현할 수 있다.<br>
 ***⚠️ Rest 파라미터는 항상 제일 마지막 파라미터로 있어야한다.***
 ```js
-function addMul (...rest, method) {}
+function addMul (...rest, method) {}  // (x)
 ```
-와 같은 방식으로 사용할 수 없다.
 <br><br>
 3. 객체에서의 spread operator<br>
 객체에서 spread operator를 이용하는 객체의 복사 또는 프로퍼티를 업데이트 할 수 있다.<br>
@@ -246,7 +238,7 @@ currentState = { ...currentState, name: '영희', age: 11};
 console.log(currentState); // {name: "영희", species: "human", age: 11}
 ```
 ## <b>Class</b>
---- 
+
 `class`는 객체 지향 프로그래밍의 핵심이며 코드를 안전하게 캡슐화할 수 있다.<br>
 ex) class 만드는 코드
 
